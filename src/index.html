@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- metadata -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home | Frederik Palmø</title>
+        <meta name="description" content="palmoe.dk | Frederik Palmø" />
+        <meta name="author" content="vodofrede" />
+        <meta property="og:title" content="Frederik Palmø" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="https://palmoe.dk" />
+
+        <!-- assets -->
+        <link rel="stylesheet" href="/assets/main.css" />
+        <link rel="icon" type="image/x-icon " href="/assets/favicon.ico" />
+        <script src="/assets/localization.js" type="text/javascript"></script>
+    </head>
+    <body onload="localize();" lang="en-gb" class="no-localize">
+        <nav>
+            <div>
+                <h2><a href="/">Frederik Palmø</a></h2>
+            </div>
+            <div>
+                <span>
+                    <h3>
+                        <a href="/blog.html">
+                            <span lang="en-gb">blog</span>
+                            <span lang="da-dk">blog</span>
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="/projects.html">
+                            <span lang="en-gb">projects</span>
+                            <span lang="da-dk">projekter</span>
+                        </a>
+                    </h3>
+                    <h3>
+                        <a href="/info.html">
+                            <span lang="en-gb">info</span>
+                            <span lang="da-dk">info</span>
+                        </a>
+                    </h3>
+                </span>
+                <select id="lang" onchange="setLocale(selected(this).value);">
+                    <option value="en-gb">🇬🇧</option>
+                    <option value="da-dk">🇩🇰</option>
+                </select>
+            </div>
+        </nav>
+
+        <header></header>
+
+        <main>
+            <p>main content goes here</p>
+        </main>
+
+        <footer>
+            <div>
+                <h5>© 2022 Frederik Palmø</h5>
+            </div>
+            <div>
+                <h5>
+                    <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">https://git.palmoe.dk/vodofrede/palmoe.dk</a>
+                </h5>
+            </div>
+        </footer>
+    </body>
+</html>

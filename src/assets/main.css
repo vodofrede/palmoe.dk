@@ -1,0 +1,209 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary: white;
+        --secondary: white;
+        --border: grey;
+        --font-color: black;
+        --font-inverted: white;
+        --link-color: blue;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #202020;
+        --secondary: #2b2b2b;
+        --border: darkgrey;
+        --font-color: white;
+        --font-inverted: black;
+        --link-color: tomato;
+    }
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background-color: var(--primary);
+    box-sizing: border-box;
+}
+
+@media (max-width: 899px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
+html * {
+    color: var(--font-color);
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body > * {
+    padding: 0 2%;
+}
+
+@media (min-width: 900px) {
+    body > * {
+        padding: 0 15%;
+    }
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: auto;
+}
+
+hr {
+    color: var(--border);
+    margin-top: 0.12rem;
+    margin-bottom: 0.3rem;
+}
+
+span {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    padding-right: 0px;
+    font-family: monospace;
+    text-decoration: underline solid var(--link-color) 10%;
+    text-underline-offset: 3.8px;
+}
+a:hover {
+    background-color: var(--link-color);
+    color: var(--font-inverted);
+}
+
+ul {
+    padding-left: 1.4em;
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+}
+
+li {
+    white-space: nowrap;
+    margin-bottom: 0.4em;
+}
+
+table {
+    overflow-x: auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 0.15rem solid var(--border);
+    border-radius: 0.5rem;
+    border-spacing: 0px;
+    overflow: scroll;
+
+    background-color: var(--primary);
+}
+
+table tbody,
+table thead {
+    width: 100%;
+}
+
+td,
+th {
+    border-bottom: 1px dotted var(--border);
+    text-overflow: ellipsis;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+}
+
+th {
+    border-bottom: 1px solid var(--border);
+}
+
+thead,
+tbody {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: inline-block;
+    user-select: none;
+    text-align: right;
+}
+
+input {
+    width: auto;
+    color: black;
+}
+
+select {
+    background-color: white;
+    border: 1px solid #777;
+    padding: 0.25em;
+    width: 100%;
+    color: black;
+}
+
+select option {
+    overflow: hidden;
+    color: black;
+}
+
+[hidden] {
+    display: none;
+}
