@@ -17,53 +17,219 @@
         <script src="/assets/localization.js" type="text/javascript"></script>
     </head>
     <body onload="localize();" lang="en-gb" class="no-localize">
-        <nav>
-            <div>
-                <h2><a href="/">Frederik Palmø</a></h2>
-            </div>
-            <div>
-                <span>
-                    <h3>
-                        <a href="/blog.html">
-                            <span lang="en-gb">blog</span>
-                            <span lang="da-dk">blog</span>
-                        </a>
-                    </h3>
-                    <h3>
-                        <a href="/projects.html">
-                            <span lang="en-gb">projects</span>
-                            <span lang="da-dk">projekter</span>
-                        </a>
-                    </h3>
-                    <h3>
-                        <a href="/info.html">
-                            <span lang="en-gb">info</span>
-                            <span lang="da-dk">info</span>
-                        </a>
-                    </h3>
-                </span>
-                <select id="lang" onchange="setLocale(selected(this).value);">
-                    <option value="en-gb">🇬🇧</option>
-                    <option value="da-dk">🇩🇰</option>
-                </select>
-            </div>
-        </nav>
-
-        <header></header>
+        <header>
+            <h1><a href="/">Frederik Palmø</a></h1>
+        </header>
 
         <main>
-            <p>main content goes here</p>
+            <section style="flex-grow: 1" class="articles">
+                <h2 lang="da-dk">Projekter</h2>
+                <h2 lang="en-gb">Projects</h2>
+
+                <div lang="da-dk">
+                    <article>
+                        <b>Redskaber til planlægning af spilkarater</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://erdtree.palmoe.dk">projekt</a>
+                            <a href="https://git.palmoe.dk/vodofrede/erdtree">kildekode</a>
+                        </span>
+                        <p>
+                            Dette projekt gør brug af grundlæggende webteknologier såsom HTML, CSS og JavaScript.
+                            Formålet var at gøre det nemmere at planlægge en karakter til spillet Elden Ring. Til
+                            udvindelse af data blev der gjort brug af et python-script som konverterede data fra spillet
+                            til JSON-format.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Implementering af hashing-algoritmer</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://crates.io/crates/lore">projekt</a>
+                            <a href="https://git.palmoe.dk/vodofrede/lore">kildekode</a>
+                            <a href="https://docs.rs/lore/latest/lore/">dokumentation</a>
+                        </span>
+                        <p>
+                            Formålet med dette projekt var implementeringen af en simpel API til at generere
+                            hashbeskeder ud fra vilkårlig inputdata. Projektet er udformet som en Rust-pakke, og gør
+                            brug af unit-testing for at sikre at outputtet er korrekt. En del af øvelsen for mig var
+                            også at skrive god dokumentering, så at det var nemt at komme i gang med at anvende pakken
+                            for en ikke-erfaren bruger.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Simpel, effektiv parsing</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://crates.io/crates/eyes">projekt</a>
+                            <a href="https://git.palmoe.dk/vodofrede/eyes">kildekode</a>
+                            <a href="https://docs.rs/eyes/latest/eyes/">dokumentation</a>
+                        </span>
+                        <p>
+                            Mange opgaver i det årlige
+                            <a href="adventofcode.com">Advent of Code</a>
+                            event består af at parse noget data og transfomere det til en ønsket output. Denne crate
+                            består af en rudimentær parser som kan transformere sit output til specifikke datatyper.
+                            Dette gør det nemt at parse input med kun ét macro-kald, hvilket simplificerer mine
+                            opgaveløsninger markant.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>IoT udendørs lyskæde</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
+                        <p>
+                            Dette projekt omhandlede en løsning til at have udendørs LED RGB lyskæder til brug i et
+                            udendørs overdækket sofaområde. Projektet gør brug af billige, ikke-smarte RGB lyskæder samt
+                            en WiFi microcontroller (ESP32) som gør en kontrolflade tilgængelig over hjemmenetværket
+                            (gennem bl.a. Apple HomeKit og Home-Assistant). Gennem dette projekt har jeg lært om
+                            IoT-protokoller og programmering af microcontrollere.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Kloner af Galaga og Breakout</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://github.com/vodofrede/DIKUGames">kildekode</a>
+                        </span>
+                        <p>
+                            Dette projekt var en del af kurset Softwareudvikling, som løb i forårssemesteret 2022. I
+                            dette projekt har jeg arbejdet sammen med to andre som en del af min studiegruppe. Projektet
+                            er udført i C\# og gør brug af mange forskellige softwareudviklingsprincipper (SOLID,
+                            testing, diagrammering og arkitekturplanlægning).
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Server</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
+                        <p>
+                            Fra min hjemmeserver leverer jeg alle de hjemmesider som jeg bruger. Dette involverer brug
+                            af Linux (specifikt Debian) og en god blanding af prælavede pakker, Docker containers og
+                            selvkompilerede pakker, samt orkestrering med SystemD. Herfra har jeg god erfaring med hvad
+                            det vil sige at tage et projekt fra en bunke kode til et leveret produkt på en webadresse.
+                        </p>
+                    </article>
+                </div>
+
+                <div lang="en-gb">
+                    <article>
+                        <b>Tools for planning game charaters</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://erdtree.palmoe.dk">project</a>
+                            <a href="https://git.palmoe.dk/vodofrede/erdtree">source</a>
+                        </span>
+                        <p>
+                            This project makes use of fundamental web technologies such as HTML, CSS and JavaScript. The
+                            lack of good buld planning tools for the game Elden Ring made me embark on this project,
+                            which consists of simple calculators for characters statistics, armor efficiency and weapon
+                            damage. Beyond the simple calculations, this project also entailed extracting the item
+                            values from the game files. This was done using Python, and the resulting values were
+                            converted to JSON files for ease of use with JavaScript.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Implementation of hashing algorithms</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://crates.io/crates/lore">project</a>
+                            <a href="https://git.palmoe.dk/vodofrede/lore">source</a>
+                            <a href="https://docs.rs/lore/latest/lore/">docs</a>
+                        </span>
+                        <p>
+                            With this project I wanted to focus on implementing a simple API that would make it easy to
+                            generate message digests for any data in Rust. I was dissatisfied with the APIs of existing
+                            packages, and sought reduce the amount of function calls necessary to get a hash value.
+                            Other focuses of this project were well-written documentation and testing.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Simple, efficient parsing library</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://crates.io/crates/eyes">project</a>
+                            <a href="https://git.palmoe.dk/vodofrede/eyes">source</a>
+                            <a href="https://docs.rs/eyes/latest/eyes/">docs</a>
+                        </span>
+                        <p>
+                            Many problems in the yearly
+                            <a href="adventofcode.com">Advent of Code</a>
+                            event consist of parsing some data and transforming afterwards. I wanted to try implementing
+                            my own simple parser, which parses strings using simple templates and converts the parsing
+                            results to specific data types. This was my first go at creating a Rust crate, and I focused
+                            on creating an idiomatic API as well as good documentation so that others might be able to
+                            use the crate.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Outdoor IoT LED chain lights</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
+                        <p>
+                            A simple IoT project consisting of a few cheap LED chain lights, a power supply and a
+                            WiFi-enabled microcontroller. The project uses existing technologies (Home Assistant, WLED)
+                            to provide a nice-looking and simple interface.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Clones of Galaga and Breakout</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem">
+                            <a href="https://github.com/vodofrede/DIKUGames">source</a>
+                        </span>
+                        <p>
+                            As part of the Software Development course at UCPH we created some small games in C\# using
+                            the provided DIKUGames library. This class taught me more efficient development patterns for
+                            OOP, as well as how to delegate work in a group environment in order to maintain development
+                            speed. As part of this project we were taught basic OOP principles such as SOLID and TDD.
+                        </p>
+                    </article>
+
+                    <article>
+                        <b>Private server</b>
+                        <span style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
+                        <p>
+                            All of my projects are hosted on my private server, located at my residence. As part of this
+                            project I have learned a lot about server administration work, web servers, package managers
+                            and container architectures. From this I have adequate level of experience with the
+                            mentioned technologies.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="info">
+                <h3>info</h3>
+                <img src="/assets/profile.png" width="120" height="120" class="profile" />
+                <dl>
+                    <dt>email</dt>
+                    <dd>
+                        <a
+                            class="email"
+                            data-user="frederik"
+                            data-domain="palmoe.dk"
+                            href="mailto:frederikATpalmoeDOTdk"
+                            onclick="this.href=this.href
+                                .replace(/AT/, '@')
+                                .replace(/DOT/, '.')"
+                        ></a>
+                    </dd>
+
+                    <dt>github</dt>
+                    <dd><a href="https://github.com/vodofrede">vodofrede</a></dd>
+                </dl>
+            </aside>
         </main>
 
         <footer>
-            <div>
-                <h5>© 2022 Frederik Palmø</h5>
-            </div>
-            <div>
-                <h5>
-                    <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">https://git.palmoe.dk/vodofrede/palmoe.dk</a>
-                </h5>
-            </div>
+            <h5>
+                <select id="lang" onchange="setLocale(selected(this).value);" style="font-size: 1.5em">
+                    <option value="en-gb">🇬🇧</option>
+                    <option value="da-dk">🇩🇰</option>
+                </select>
+            </h5>
+            <h5>
+                <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">© 2022 Frederik Palmø</a>
+            </h5>
         </footer>
     </body>
 </html>
