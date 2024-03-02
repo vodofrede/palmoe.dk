@@ -26,12 +26,6 @@ html {
     box-sizing: border-box;
 }
 
-@media (max-width: 1000px) {
-    html {
-        font-size: 0.8rem;
-    }
-}
-
 html * {
     color: var(--font-color);
     box-sizing: inherit;
@@ -46,13 +40,7 @@ body {
 }
 
 body > * {
-    padding: 0 4%;
-}
-
-@media (min-width: 1000px) {
-    body > * {
-        padding: 0 25%;
-    }
+    padding: 0 4vw;
 }
 
 header {
@@ -61,9 +49,14 @@ header {
 
 main {
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: row;
     justify-content: space-around;
-    gap: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-flow: row wrap-reverse
+    }
 }
 
 article {
@@ -113,10 +106,8 @@ h5,
 h6 {
     margin-top: 1rem;
     margin-bottom: 1.2rem;
-
     overflow-wrap: break-word;
     word-wrap: break-word;
-
     line-height: 1.1;
     font-weight: bold;
 }
@@ -132,6 +123,7 @@ a {
     text-decoration: underline solid var(--link-color) 10%;
     text-underline-offset: 3.8px;
 }
+
 a:hover {
     background-color: var(--link-color);
     color: var(--font-inverted);
@@ -157,7 +149,6 @@ table {
     border-radius: 0.5rem;
     border-spacing: 0px;
     overflow: scroll;
-
     background-color: var(--primary);
 }
 
@@ -214,11 +205,9 @@ meter {
     box-sizing: border-box;
     margin: 0;
     padding: 0em 0.2em 0.1em 0.2em;
-
     background-color: var(--secondary);
     border: 1px solid var(--border);
     border-radius: 1px;
-
     font-family: inherit;
     font-size: 100%;
 }
@@ -233,6 +222,8 @@ button:active {
 
 /* custom */
 .profile {
+    width: 70%;
+    height: auto;
     margin-bottom: 1rem;
     border-radius: 10px;
 }
@@ -240,7 +231,6 @@ button:active {
 .articles {
     display: flex;
     flex-flow: column nowrap;
-    max-width: 70%;
 }
 
 .info {
@@ -248,12 +238,4 @@ button:active {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-}
-
-.email::after {
-    content: attr(data-domain);
-}
-
-.email::before {
-    content: attr(data-user) "\0040";
 }
