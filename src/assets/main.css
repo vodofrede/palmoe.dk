@@ -50,7 +50,7 @@ header {
 main {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -231,6 +231,7 @@ button:active {
 .articles {
     display: flex;
     flex-flow: column nowrap;
+    max-width: 700px;
 }
 
 .info {
