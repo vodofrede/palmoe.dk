@@ -13,9 +13,7 @@
     :root {
         --primary: #202020;
         --secondary: #2b2b2b;
-        --border: darkgrey;
         --font-color: white;
-        --font-inverted: black;
         --link-color: tomato;
     }
 }
@@ -26,7 +24,7 @@ html {
     box-sizing: border-box;
 }
 
-html * {
+* {
     color: var(--font-color);
     box-sizing: inherit;
     margin: 0px;
@@ -129,52 +127,6 @@ a:hover {
     color: var(--font-inverted);
 }
 
-ul {
-    padding-left: 1.4em;
-    margin-top: 0px;
-    margin-bottom: 2.5rem;
-}
-
-li {
-    white-space: nowrap;
-    margin-bottom: 0.4em;
-}
-
-table {
-    overflow-x: auto;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    border: 0.15rem solid var(--border);
-    border-radius: 0.5rem;
-    border-spacing: 0px;
-    overflow: scroll;
-    background-color: var(--primary);
-}
-
-table tbody,
-table thead {
-    width: 100%;
-}
-
-td,
-th {
-    border-bottom: 1px dotted var(--border);
-    text-overflow: ellipsis;
-    padding: 0.4rem;
-    font-size: 0.9rem;
-}
-
-th {
-    border-bottom: 1px solid var(--border);
-}
-
-thead,
-tbody {
-    margin: 0;
-    padding: 0;
-}
-
 dl {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -190,37 +142,6 @@ dd {
     font-size: 0.9rem;
 }
 
-label {
-    display: inline-block;
-    user-select: none;
-    text-align: right;
-}
-
-button,
-label,
-input,
-select,
-progress,
-meter {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0em 0.2em 0.1em 0.2em;
-    background-color: var(--secondary);
-    border: 1px solid var(--border);
-    border-radius: 1px;
-    font-family: inherit;
-    font-size: 100%;
-}
-
-button:active {
-    background-color: var(--link-color);
-}
-
-[hidden] {
-    display: none;
-}
-
-/* custom */
 .profile {
     width: 50%;
     height: auto;
