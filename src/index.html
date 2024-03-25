@@ -1,184 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="da-dk">
 
 <head>
-    <!-- metadata -->
+    <title>Frederik Palmø</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home | Frederik Palmø</title>
-    <meta name="description" content="palmoe.dk | Frederik Palmø" />
-    <meta name="author" content="vodofrede" />
-    <meta property="og:title" content="Frederik Palmø" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="https://palmoe.dk" />
-    <!-- assets -->
     <link rel="stylesheet" href="/assets/main.css" />
     <link rel="icon" type="image/x-icon " href="/assets/favicon.ico" />
-    <script src="/assets/localization.js" type="text/javascript"></script>
 </head>
 
-<body onload="localize();" lang="en-gb" class="no-localize">
-    <header>
+<body class="column separate" style="padding: 2%; gap: 15px">
+    <header class="row center">
         <h1><a href="/">Frederik Palmø</a></h1>
     </header>
-    <main>
-        <section style="flex-grow: 1" class="articles">
-            <h2 lang="da-dk">Projekter</h2>
-            <div lang="da-dk">
-                <article>
-                    <b>Redskaber til planlægning af spilkarakterer</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://erdtree.palmoe.dk" target="_blank"
-                            rel="noopener noreferrer">projekt</a>
-                        <a href="https://git.palmoe.dk/vodofrede/erdtree"
-                            target="_blank" rel="noopener noreferrer">
-                            kildekode
-                        </a>
+    <main class="row center" style="flex-wrap: wrap-reverse">
+        <section class="column" style="max-width: 700px; gap: 15px; width: 100%;">
+            <h2>Projekter</h2>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Spilkarakter-planlægger</h3>
+                    <span class="row separate">
+                        <a href="https://erdtree.palmoe.dk">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/erdtree">kildekode</a>
                     </span>
-                    <p>
-                        Dette projekt gør brug af grundlæggende webteknologier
-                        såsom HTML, CSS og JavaScript.
-                        Formålet var at gøre det nemmere at planlægge en
-                        karakter til spillet Elden Ring. Til
-                        udvindelse af data blev der gjort brug af et
-                        python-script som konverterede data fra spillet
-                        til JSON-format.
-                    </p>
-                </article>
-                <article>
-                    <b>Implementering af hashing-algoritmer</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://crates.io/crates/lore" target="_blank"
-                            rel="noopener noreferrer">
-                            projekt
-                        </a>
-                        <a href="https://git.palmoe.dk/vodofrede/lore"
-                            target="_blank" rel="noopener noreferrer">
-                            kildekode
-                        </a>
-                        <a href="https://docs.rs/lore/latest/lore/"
-                            target="_blank" rel="noopener noreferrer">
-                            dokumentation
-                        </a>
+                </div>
+                <p>Dette projekt gør brug af grundlæggende webteknologier såsom HTML, CSS og JavaScript. Formålet var at gøre det nemmere at planlægge en karakter til spillet Elden Ring. Spil-data til hjemmesiden blev skrabet til JSON-format af et hjemmelavet Python-script. </p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Hashing-bibliotek</h3>
+                    <span class="row separate">
+                        <a href="https://crates.io/crates/lore">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/lore">kildekode</a>
+                        <a href="https://docs.rs/lore/latest/lore/">dokumentation</a>
                     </span>
-                    <p>
-                        Formålet med dette projekt var implementeringen af en
-                        simpel API til at generere
-                        hashbeskeder ud fra vilkårlig inputdata. Projektet er
-                        udformet som en Rust-pakke, og gør
-                        brug af unit-testing for at sikre at outputtet er
-                        korrekt. En del af øvelsen for mig var
-                        også at skrive god dokumentering, så at det var nemt at
-                        komme i gang med at anvende pakken
-                        for en ikke-erfaren bruger.
-                    </p>
-                </article>
-                <article>
-                    <b>Simpel, effektiv parsing</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://crates.io/crates/eyes" target="_blank"
-                            rel="noopener noreferrer">
-                            projekt
-                        </a>
-                        <a href="https://git.palmoe.dk/vodofrede/eyes"
-                            target="_blank" rel="noopener noreferrer">
-                            kildekode
-                        </a>
-                        <a href="https://docs.rs/eyes/latest/eyes/"
-                            target="_blank" rel="noopener noreferrer">
-                            dokumentation
-                        </a>
+                </div>
+                <p>Formålet med dette projekt var implementeringen af en simpel API til at generere hashes. Projektet gør brug af unit-testing for at sikre at outputtet er korrekt. En del af øvelsen for mig var også at skrive god dokumentering, så at det var nemt at komme i gang med at anvende pakken for en ny bruger.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Leetcode input parser</h3>
+                    <span class="row separate">
+                        <a href="https://crates.io/crates/eyes">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/eyes">kildekode</a>
+                        <a href="https://docs.rs/eyes/latest/eyes/">dokumentation</a>
                     </span>
-                    <p>
-                        Mange opgaver i det årlige
-                        <a href="https://adventofcode.com" target="_blank"
-                            rel="noopener noreferrer">
-                            Advent of Code
-                        </a>
-                        event består af at parse noget data og transfomere det
-                        til en ønsket output. Denne crate
-                        består af en rudimentær parser som kan transformere sit
-                        output til specifikke datatyper.
-                        Dette gør det nemt at parse input med kun ét macro-kald,
-                        hvilket simplificerer mine
-                        opgaveløsninger markant.
-                    </p>
-                </article>
-                <article>
-                    <b>IoT udendørs lyskæde</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
-                    <p>
-                        Dette projekt omhandlede en løsning til at have udendørs
-                        LED RGB lyskæder til brug i et
-                        udendørs overdækket sofaområde. Projektet gør brug af
-                        billige, ikke-smarte RGB lyskæder samt
-                        en WiFi microcontroller (ESP32) som gør en kontrolflade
-                        tilgængelig over hjemmenetværket
-                        (gennem bl.a. Apple HomeKit og Home-Assistant). Gennem
-                        dette projekt har jeg lært om
-                        IoT-protokoller og programmering af microcontrollere.
-                    </p>
-                </article>
-                <article>
-                    <b>Kloner af Galaga og Breakout</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://github.com/vodofrede/DIKUGames"
-                            target="_blank" rel="noopener noreferrer">
-                            kildekode
-                        </a>
+                </div>
+                <p>During the annual <a href="https://adventofcode.com">Advent of Code</a> event, solutions typically begin by reading input data and transforming it into a data structure that can be worked on. This library consists of a rudimentary parser that can transform its output into specific data types. This makes it easy to understand input with just a few lines of code.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Justerbar lyskæde</h3>
+                    <span class="row separate"></span>
+                </div>
+                <p>Dette projekt omhandlede en løsning til at have udendørs lyskæder til brug i et overdækket sofaområde. Projektet gør brug af billige, "dumme" lyskæder samt en microcontroller som gør en kontrolflade tilgængelig over hjemmenetværket (til bl.a. Apple HomeKit og Home-Assistant). Gennem dette projekt har jeg lært om IoT-protokoller og programmering af microcontrollere.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Spilkloner af Galaga og Breakout</h3>
+                    <span class="row separate">
+                        <a href="https://github.com/vodofrede/DIKUGames">kildekode</a>
                     </span>
-                    <p>
-                        Dette projekt var en del af kurset Softwareudvikling,
-                        som løb i forårssemesteret 2022. I
-                        dette projekt har jeg arbejdet sammen med to andre som
-                        en del af min studiegruppe. Projektet
-                        er udført i C\# og gør brug af mange forskellige
-                        softwareudviklingsprincipper (SOLID,
-                        testing, diagrammering og arkitekturplanlægning).
-                    </p>
-                </article>
-                <article>
-                    <b>Server</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
-                    <p>
-                        Fra min hjemmeserver leverer jeg alle de hjemmesider som
-                        jeg bruger. Dette involverer brug
-                        af Linux (specifikt Debian) og en god blanding af
-                        prælavede pakker, Docker containers og
-                        selvkompilerede pakker, samt orkestrering med SystemD.
-                        Herfra har jeg god erfaring med hvad
-                        det vil sige at tage et projekt fra en bunke kode til et
-                        leveret produkt på en webadresse.
-                    </p>
-                </article>
-            </div>
+                </div>
+                <p>Projektet var en del af kurset Softwareudvikling på KU. I dette projekt har jeg arbejdet sammen med to andre som en del af min studiegruppe. Projektet er udført i C# og gør brug af mange forskellige OOP- og generelle softwareudviklingsprincipper (SOLID, testing, diagrammering og arkitekturplanlægning).</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Server</h3>
+                    <span class="row separate"></span>
+                </div>
+                <p>Fra min hjemmeserver styrer jeg alle mine projekter. Dette involverer brug af Linux og containers. Herfra har jeg erfaring med hvad det vil sige at tage et projekt fra en bunke kode til et færdigt produkt på en hjemmeside.</p>
+            </article>
         </section>
-        <aside class="info">
-            <h3>info</h3>
-            <img src="/assets/palmoe.png" width="120" height="120"
-                class="profile" />
+        <aside class="column" style="align-items: center; min-width: 25%; gap: 15px">
+            <img src="/assets/palmoe.png" style="width: 50%; height: auto; border-radius: 10px" alt="palmoe.dk logo" />
             <dl>
-                <dt>github</dt>
-                <dd><a href="https://github.com/vodofrede">vodofrede</a></dd>
-                <dt>gitea</dt>
-                <dd><a href="https://git.palmoe.dk/vodofrede">vodofrede</a></dd>
+                <div class="row separate">
+                    <dt>Gitea</dt>
+                    <dd><a href="https://git.palmoe.dk/vodofrede">vodofrede</a></dd>
+                </div>
+                <div class="row separate" style="gap: 20px">
+                    <dt>GitHub</dt>
+                    <dd><a href="https://github.com/vodofrede">vodofrede</a></dd>
+                </div>
             </dl>
         </aside>
     </main>
-    <footer>
-        <h5>
-            <a href="/en">English</a>
-        </h5>
-        <h5>
-            <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">© 2022 Frederik
-                Palmø</a>
-        </h5>
+    <footer class="row separate">
+        <a href="/en">English</a>
+        <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">© 2022 Frederik Palmø</a>
     </footer>
 </body>
 

@@ -1,182 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="da-dk">
 
 <head>
-    <!-- metadata -->
+    <title>Frederik Palmø</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home | Frederik Palmø</title>
-    <meta name="description" content="palmoe.dk | Frederik Palmø" />
-    <meta name="author" content="vodofrede" />
-    <meta property="og:title" content="Frederik Palmø" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="https://palmoe.dk" />
-    <!-- assets -->
     <link rel="stylesheet" href="/assets/main.css" />
     <link rel="icon" type="image/x-icon " href="/assets/favicon.ico" />
 </head>
 
-<body>
-    <header>
+<body class="column separate" style="padding: 2%; gap: 15px">
+    <header class="row center">
         <h1><a href="/">Frederik Palmø</a></h1>
     </header>
-    <main>
-        <section class="articles">
-            <h2 lang="da-dk">Projects</h2>
-            <div lang="en-gb">
-                <article>
-                    <b>Tools for planning game characters</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://erdtree.palmoe.dk" target="_blank"
-                            rel="noopener noreferrer">project</a>
-                        <a href="https://git.palmoe.dk/vodofrede/erdtree"
-                            target="_blank" rel="noopener noreferrer">
-                            source
-                        </a>
+    <main class="row center" style="flex-wrap: wrap-reverse">
+        <section class="column" style="max-width: 700px; gap: 15px; width: 100%;">
+            <h2>Projects</h2>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Character planner</h3>
+                    <span class="row separate">
+                        <a href="https://erdtree.palmoe.dk">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/erdtree">kildekode</a>
                     </span>
-                    <p>
-                        This project makes use of fundamental web technologies
-                        such as HTML, CSS and JavaScript. The
-                        lack of good build planning tools for the game Elden
-                        Ring made me embark on this project,
-                        which consists of simple calculators for characters
-                        statistics, armor efficiency and weapon
-                        damage. Beyond the simple calculations, this project
-                        also entailed extracting the item
-                        values from the game files. This was done using Python,
-                        and the resulting values were
-                        converted to JSON files for ease of use with JavaScript.
-                    </p>
-                </article>
-                <article>
-                    <b>Implementation of hashing algorithms</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://crates.io/crates/lore" target="_blank"
-                            rel="noopener noreferrer">
-                            project
-                        </a>
-                        <a href="https://git.palmoe.dk/vodofrede/lore"
-                            target="_blank" rel="noopener noreferrer">
-                            source
-                        </a>
-                        <a href="https://docs.rs/lore/latest/lore/"
-                            target="_blank" rel="noopener noreferrer">
-                            docs
-                        </a>
+                </div>
+                <p>This project utilizes fundamental web technologies such as HTML, CSS, and JavaScript. The purpose was to make it easier to plan a character for the game Elden Ring. Game data for the website was scraped into JSON format by a homemade Python script.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Hashing library</h3>
+                    <span class="row separate">
+                        <a href="https://crates.io/crates/lore">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/lore">kildekode</a>
+                        <a href="https://docs.rs/lore/latest/lore/">dokumentation</a>
                     </span>
-                    <p>
-                        With this project I wanted to focus on implementing a
-                        simple API that would make it easy to
-                        generate message digests for any data in Rust. I was
-                        dissatisfied with the APIs of existing
-                        packages, and sought reduce the amount of function calls
-                        necessary to get a hash value.
-                        Other focuses of this project were well-written
-                        documentation and testing.
-                    </p>
-                </article>
-                <article>
-                    <b>Simple, efficient parsing library</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://crates.io/crates/eyes" target="_blank"
-                            rel="noopener noreferrer">
-                            project
-                        </a>
-                        <a href="https://git.palmoe.dk/vodofrede/eyes"
-                            target="_blank" rel="noopener noreferrer">
-                            source
-                        </a>
-                        <a href="https://docs.rs/eyes/latest/eyes/"
-                            target="_blank" rel="noopener noreferrer">
-                            docs
-                        </a>
+                </div>
+                <p>The purpose of this project was the implementation of a simple API for generating hashes. The project utilizes unit testing to ensure that the output is correct. A part of the exercise for me was also writing good documentation, making it easy for a new user to get started with using the package.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Leetcode input parser</h3>
+                    <span class="row separate">
+                        <a href="https://crates.io/crates/eyes">projekt</a>
+                        <a href="https://git.palmoe.dk/vodofrede/eyes">kildekode</a>
+                        <a href="https://docs.rs/eyes/latest/eyes/">dokumentation</a>
                     </span>
-                    <p>
-                        Many problems in the yearly
-                        <a href="https://adventofcode.com">Advent of Code</a>
-                        event consist of parsing some data and transforming
-                        afterwards. I wanted to try implementing
-                        my own simple parser, which parses strings using simple
-                        templates and converts the parsing
-                        results to specific data types. This was my first go at
-                        creating a Rust crate, and I focused
-                        on creating an idiomatic API as well as good
-                        documentation so that others might be able to
-                        use the crate.
-                    </p>
-                </article>
-                <article>
-                    <b>Outdoor IoT LED chain lights</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
-                    <p>
-                        A simple internet of things project consisting of a few
-                        cheap LED chain lights, a power
-                        supply and a WiFi-enabled microcontroller. The project
-                        uses existing technologies (Home
-                        Assistant, WLED) to provide a nice-looking and simple
-                        interface.
-                    </p>
-                </article>
-                <article>
-                    <b>Clones of Galaga and Breakout</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem">
-                        <a href="https://github.com/vodofrede/DIKUGames"
-                            target="_blank" rel="noopener noreferrer">
-                            source
-                        </a>
+                </div>
+                <p>During the annual <a href="https://adventofcode.com">Advent of Code</a> event, solutions typically begin by reading input data and transforming it into a data structure that can be worked on. This library consists of a rudimentary parser that can transform its output into specific data types. This makes it easy to understand input with just a few lines of code.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Controllable string lights</h3>
+                    <span class="row separate"></span>
+                </div>
+                <p>This project involved a solution for having outdoor string lights for use in a covered lounge area. The project utilizes inexpensive, "dumb" string lights along with a microcontroller that provides a control interface accessible over the home network (for platforms like Apple HomeKit and Home-Assistant). Through this project, I have learned about IoT protocols and programming microcontrollers.</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Clones of Galaga og Breakout</h3>
+                    <span class="row separate">
+                        <a href="https://github.com/vodofrede/DIKUGames">kildekode</a>
                     </span>
-                    <p>
-                        As part of the Software Development course at UCPH we
-                        created some small games in C\# using
-                        the provided DIKUGames library. This class taught me
-                        more efficient development patterns for
-                        OOP, as well as how to delegate work in a group
-                        environment in order to maintain development
-                        speed. As part of this project we were taught basic OOP
-                        principles such as SOLID and TDD.
-                    </p>
-                </article>
-                <article>
-                    <b>Private server</b>
-                    <span
-                        style="display: flex; justify-content: flex-end; gap: 0.5rem"></span>
-                    <p>
-                        All of my projects are hosted on my private server,
-                        located at my residence. As part of this
-                        project I have learned a lot about server administration
-                        work, web servers, package managers
-                        and container architectures. From this I have adequate
-                        level of experience with the
-                        mentioned technologies.
-                    </p>
-                </article>
-            </div>
+                </div>
+                <p>This project was part of the Software Development course at UCPH. In this project, I collaborated with two others as part of my study group. The project is implemented in C# and utilizes various object-oriented programming (OOP) and general software development principles (SOLID, testing, diagramming, and architectural planning).</p>
+            </article>
+            <article class="column separate">
+                <div class="row separate wrap">
+                    <h3>Server</h3>
+                    <span class="row separate"></span>
+                </div>
+                <p>From my home server, I manage all my projects. This involves using Linux and containers. From here, I have experience in taking a project from a pile of code to a finished product on a website.</p>
+            </article>
         </section>
-        <aside class="info">
-            <h3>info</h3>
-            <img src="/assets/palmoe.png" width="120" height="120"
-                class="profile" />
+        <aside class="column" style="align-items: center; min-width: 25%; gap: 15px">
+            <img src="/assets/palmoe.png" style="width: 50%; height: auto; border-radius: 10px" alt="palmoe.dk logo" />
             <dl>
-                <dt>github</dt>
-                <dd><a href="https://github.com/vodofrede">vodofrede</a></dd>
-                <dt>gitea</dt>
-                <dd><a href="https://git.palmoe.dk/vodofrede">vodofrede</a></dd>
+                <div class="row separate">
+                    <dt>Gitea</dt>
+                    <dd><a href="https://git.palmoe.dk/vodofrede">vodofrede</a></dd>
+                </div>
+                <div class="row separate" style="gap: 20px">
+                    <dt>GitHub</dt>
+                    <dd><a href="https://github.com/vodofrede">vodofrede</a></dd>
+                </div>
             </dl>
         </aside>
     </main>
-    <footer>
-        <h5>
-            <a href="/">Dansk</a>
-        </h5>
-        <h5>
-            <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">© 2022 Frederik
-                Palmø</a>
-        </h5>
+    <footer class="row separate">
+        <a href="/en">English</a>
+        <a href="https://git.palmoe.dk/vodofrede/palmoe.dk">© 2022 Frederik Palmø</a>
     </footer>
 </body>
 
